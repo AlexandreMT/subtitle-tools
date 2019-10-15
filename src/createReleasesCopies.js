@@ -19,7 +19,7 @@ async function readReleasesNames() {
 async function createReleasesCopies(originalSub, originalSubPath, releasesNames) {
 	releasesNames.forEach((release) => {
 		const destinationFile = `${originalSubPath}\\${release}.srt`;
-		fs.copyFile(originalSub, destinationFile, (err) => {
+		fs.copyFile(originalSub, destinationFile, (error) => {
 			if (error) {
 				throw error;
 			}
